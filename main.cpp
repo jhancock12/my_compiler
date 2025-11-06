@@ -1,27 +1,18 @@
 // Includes
-#include <iostream>
-#include <string>
-#include <vector>
-#include <tuple>
-#include <algorithm>
-#include <cctype>
+#include "includes.h"
 
 // My headers
-#include "single_line.h"
+#include "multi_line.h"
+
+// Want to add a bracket ADDER to the single line stuff - mine doesnt work, need to rethink 
 
 int main()
 {
-    // I am going to build a calculator
-    // First thing is inputs, then operations, then I'll think again
     std::cout << "Running" << std::endl;
-    std::string inp = "(((7 + 7)    / 7) / 6)";
-
-    std::string compact_string = compactify_string(inp);
-
-    compact_string = solve_line(compact_string);
-    
-    std::cout << "result: " << compact_string << std::endl;
-
+    std::string inp = "(((7 + 9)    / 7)  / 6); (5  * 3); (5*   (3   +   2))";
+    std::string no_bracket_string = "9+1 * 3";
+    std::string compact_string = compactify_string(no_bracket_string);
+    std::string result = bracket_adder(compact_string);
     
     
     return 0;
