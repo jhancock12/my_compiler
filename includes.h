@@ -6,7 +6,7 @@
 #include <cctype>
 #include <map>
 
-const int MAXIMUM_ITERS = 10;
+const int MAXIMUM_ITERS = 1000;
 
 int print(int number, std::string name = ""){
     std::cout << name << ": " << number << std::endl;

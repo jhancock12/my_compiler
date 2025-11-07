@@ -19,8 +19,10 @@ std::vector<std::string> parse_lines(std::string compact_lines){
     }
 }
 
-std::vector<std::string> solve_lines(std::string compact_lines){
+std::vector<std::string> solve_lines(std::string lines){
+    std::string compact_lines = compactify_string(lines);
     std::vector<std::string> compact_string_list = parse_lines(compact_lines);
+    print(compact_string_list);
     int length_list = compact_string_list.size();
     std::string compact_string; 
     std::vector<std::string> solved_lines = {};
